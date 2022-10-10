@@ -3,56 +3,56 @@
 @tailwind utilities;
 
 @layer components {
- .sidebar-icon {
-  @apply relative flex items-center justify-center
-         h-12 w-12 my-2 mx-auto shadow-lg
-         bg-gray-700 text-green-500 hover:bg-green-600 hover:text-white
-         rounded-3xl hover:rounded-xl
-         transition-all duration-300 ease-linear
-         cursor-pointer;
- }
+  .sidebar-icon {
+    @apply relative flex items-center justify-center
+           h-12 w-12 my-2 mx-auto shadow-lg
+           bg-gray-700 text-green-500 hover:bg-green-600 hover:text-white
+           rounded-3xl hover:rounded-xl
+           transition-all duration-300 ease-linear
+           cursor-pointer;
+  }
 
- .sidebar-tooltip {
-  @apply absolute w-auto p-2 m-2 min-w-max left-14
-         rounded-md shadow-md
-         text-white bg-gray-900
-         text-xs font-bold caret-transparent
-         transition-all duration-100 scale-0 origin-left;
- }
+  .sidebar-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max left-14
+           rounded-md shadow-md
+           text-white bg-gray-900
+           text-xs font-bold caret-transparent
+           transition-all duration-100 scale-0 origin-left;
+  }
 
- .card {
- @apply block p-6 rounded-lg border shadow-md m-4
-      bg-gray-800 border-gray-200 hover:bg-gray-700
- }
+  .card {
+    @apply block p-6 rounded-lg border shadow-md m-4
+           bg-gray-800 border-gray-200 hover:bg-gray-700
+  }
 
- .card-no-hover {
- @apply block p-6 rounded-lg border shadow-md m-4
-      bg-gray-800 border-gray-200
- }
+  .card-no-hover {
+    @apply block p-6 rounded-lg border shadow-md m-4
+           bg-gray-800 border-gray-200
+  }
 
- .card-title {
- @apply mb-2 text-2xl font-bold tracking-tight text-white border-b-2 border-gray-200
- }
+  .card-title {
+    @apply mb-2 text-2xl font-bold tracking-tight text-white border-b-2 border-gray-200
+  }
 
- .card-text {
- @apply font-normal text-white
- }
+  .card-text {
+    @apply font-normal text-white
+  }
 
- .card-button {
- @apply inline-flex items-center py-2 px-3 text-sm font-medium text-center
-        text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4
-        focus:outline-none focus:ring-blue-300
- }
+  .card-button {
+    @apply inline-flex items-center py-2 px-3 text-sm font-medium text-center
+           text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4
+           focus:outline-none focus:ring-blue-300
+  }
 
- .profile-icon {
- @apply object-cover object-left-top h-1/6 w-1/6 m-2 border-gray-200 rounded-full border-2
- }
+  .profile-icon {
+    @apply object-cover object-left-top max-w-xs max-h-80 m-2 border-gray-200 rounded-full border-2
+  }
 
- .socials-icon {
- @apply text-white mt-1
- }
+  .socials-icon {
+    @apply text-white mt-1
+  }
 
- .socials-bar {
- @apply hover:ml-2 transition-all
- }
+  .socials-bar {
+    @apply hover:ml-2 transition-all
+  }
 }
