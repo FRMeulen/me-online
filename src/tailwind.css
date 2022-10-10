@@ -21,12 +21,17 @@
  }
 
  .card {
- @apply block p-6 max-w-sm rounded-lg border shadow-md m-4
+ @apply block p-6 rounded-lg border shadow-md m-4
       bg-gray-800 border-gray-200 hover:bg-gray-700
  }
 
+ .card-no-hover {
+ @apply block p-6 rounded-lg border shadow-md m-4
+      bg-gray-800 border-gray-200
+ }
+
  .card-title {
- @apply mb-2 text-2xl font-bold tracking-tight text-white
+ @apply mb-2 text-2xl font-bold tracking-tight text-white border-b-2 border-gray-200
  }
 
  .card-text {
@@ -40,6 +45,14 @@
  }
 
  .profile-icon {
- @apply object-cover object-left-top h-48 w-48 p-6 border-gray-200 rounded-full border-2
+ @apply object-cover object-left-top h-1/6 w-1/6 m-2 border-gray-200 rounded-full border-2
+ }
+
+ .socials-icon {
+ @apply text-white mt-1
+ }
+
+ .socials-bar {
+ @apply hover:ml-2 transition-all
  }
 }
