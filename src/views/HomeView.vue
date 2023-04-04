@@ -1,8 +1,14 @@
 <template>
   <div class="home w-11/12">
     <div class="flex flex-row max-h-80">
-      <img alt="Me" src="@/assets/me.jpg" class="profile-icon" />
-      <div class="card w-2/3">
+      <img
+        alt="Me"
+        src="@/assets/me.jpg"
+        class="profile-icon w-16 h-16 md:w-32 md:h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64 2xl:w-96 2xl:h-96"
+      />
+      <div
+        class="card w-128 h-16 md:w-160 md:h-32 lg:w-192 lg:h-48 xl:w-224 xl:h-64 2xl:w-256 2xl:h-96"
+      >
         <h1 class="card-title">Hello there! - Let me introduce myself.</h1>
         <p class="card-text h-3/4">
           I'm Falco van der Meulen, a friendly full-stack developer and
@@ -13,7 +19,7 @@
           <br />
         </p>
         <p class="text-right text-white">
-          Feel free to have a look around my webpage :)
+          Feel free to have a look around my webpage :)<br />
         </p>
       </div>
       <div class="card-no-hover w-1/5">

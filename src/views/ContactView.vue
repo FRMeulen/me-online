@@ -1,6 +1,6 @@
 <template>
-  <div class="contact">
-    <h1>Contact page :)</h1>
+  <div class="contact content-center flex">
+    <div class="bg-green-500 w-1/2 ml-auto mr-auto">Test block</div>
   </div>
 </template>
 

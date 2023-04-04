@@ -12,10 +12,11 @@ import {
   faHouse,
   faQuestion,
   faEnvelope,
+  faCoffee,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faHouse, faQuestion, faEnvelope);
+library.add(faHouse, faQuestion, faEnvelope, faCoffee);
 library.add(faGithub, faLinkedin);
 
 createApp(App)
