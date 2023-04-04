@@ -1,54 +1,8 @@
 <template>
-  <div class="home w-11/12">
-    <div class="flex flex-row max-h-80">
-      <img
-        alt="Me"
-        src="@/assets/me.jpg"
-        class="profile-icon w-16 h-16 md:w-32 md:h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64 2xl:w-96 2xl:h-96"
-      />
-      <div
-        class="card w-128 h-16 md:w-160 md:h-32 lg:w-192 lg:h-48 xl:w-224 xl:h-64 2xl:w-256 2xl:h-96"
-      >
-        <h1 class="card-title">Hello there! - Let me introduce myself.</h1>
-        <p class="card-text h-3/4">
-          I'm Falco van der Meulen, a friendly full-stack developer and
-          enthusiastic climber.<br />
-          Currently 24 years of age and living near Rotterdam, South-Holland.<br />
-          I love playing video games, going to festivals, climbing, watching
-          anime, or hanging out with friends.<br />
-          <br />
-        </p>
-        <p class="text-right text-white">
-          Feel free to have a look around my webpage :)<br />
-        </p>
-      </div>
-      <div class="card-no-hover w-1/5">
-        <h1 class="card-title">Find me</h1>
-        <SocialsIcon
-          icon-name="fa-brands fa-github"
-          description="Github: FRMeulen"
-          url="https://github.com/FRMeulen"
-        />
-        <SocialsIcon
-          icon-name="fa-brands fa-linkedin"
-          description="LinkedIn"
-          url="https://www.linkedin.com/in/falco-van-der-meulen-671614153/"
-        />
-        <SocialsIcon
-          icon-name="fa-solid fa-envelope"
-          description="falco.meulen@gmail.com"
-          url="#"
-        />
-      </div>
-    </div>
-    <div class="flex flex-row">
-      <div class="card w-full">
-        <h1 class="card-text">To-be timeline?</h1>
-      </div>
-    </div>
+  <div class="home flex row">
+    <div class="main-content bg-slate-900 w-2/3 m-2">Test</div>
+    <div class="right-column bg-green-500 w-1/3 m-2">Yes</div>
   </div>
 </template>
 
-<script setup lang="ts">
-import SocialsIcon from "@/components/home/SocialsIcon.vue";
-</script>
+<script setup lang="ts"></script>
