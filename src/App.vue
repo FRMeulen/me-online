@@ -11,5 +11,5 @@
 import { useStore } from "vuex";
 import SideBar from "./components/layout/SideBar.vue";
 
-const store = useStore();
+//const store = useStore();
 </script>
