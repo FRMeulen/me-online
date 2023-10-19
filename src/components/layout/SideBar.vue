@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-screen w-16 p-2 flex flex-col bg-primary text-secondary shadow-lg border-r-2 border-gray-400"
+    class="h-screen w-16 p-1 flex flex-col bg-bgsecondary textsecondary shadow-lg border-r-2 border-primary"
   >
     <SideBarIcon
       icon-name="fa-solid fa-house"
