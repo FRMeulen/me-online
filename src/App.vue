@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { useStore } from "vuex";
+//import { useStore } from "vuex";
 import SideBar from "./components/layout/SideBar.vue";
 
 //const store = useStore();
