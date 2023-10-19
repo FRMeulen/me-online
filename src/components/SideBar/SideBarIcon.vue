@@ -1,7 +1,7 @@
 <template>
-  <div class="sidebar-icon group">
-    <font-awesome-icon :icon="icon" />
-    <span class="sidebar-tooltip group-hover:scale-100">{{ tooltipText }}</span>
+  <div class="sidebar-icon flex flex-row">
+    <font-awesome-icon class="mr-2" :icon="icon" />
+    <span>{{ buttonName }}</span>
   </div>
 </template>
 
@@ -10,9 +10,9 @@ import { ref } from "vue";
 
 const props = defineProps({
   iconName: String,
-  tooltip: String,
+  buttonName: String,
 });
 
 const icon = ref(props.iconName);
-const tooltipText = ref(props.tooltip);
+const buttonName = ref(props.buttonName);
 </script>

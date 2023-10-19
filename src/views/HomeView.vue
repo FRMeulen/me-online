@@ -15,11 +15,6 @@
           Welcome to my webpage.
         </p>
       </div>
-      <div
-        class="w-1/3 bg-gradient-to-br from-primary via-secondary to-primary rounded-full"
-      >
-        <img alt="Me" class="rounded-full p-1" src="@/assets/me.jpg" />
-      </div>
     </div>
   </div>
 </template>
