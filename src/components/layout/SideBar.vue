@@ -40,7 +40,7 @@ import SideBarIcon from "@/components/SideBar/SideBarIcon.vue";
 import router from "@/router";
 
 const navigate = (view: string) => {
-  console.log(view);
+  console.log(`Navigating to ${view}.`);
   router.push({ name: view });
 };
 </script>
