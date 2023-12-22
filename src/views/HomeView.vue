@@ -1,7 +1,8 @@
 <template>
-  <div class="home h-full">
+  <div class="home h-full" ref="view">
     <div
-      class="introduction-container flex flex-col items-start h-full justify-center w-full"
+      class="introduction-container h-full w-fit flex flex-col justify-center items-center m-auto"
+      ref="intro_container"
     >
       <span
         class="font-bold leading-relaxed self-center text-7xl md:text-8xl lg:text-9xl"
@@ -28,10 +29,24 @@
         homepage
       </span>
     </div>
-    <HomeBackGround />
+    <HomeBackGround
+      :viewWidth="viewSize.width.value"
+      :viewHeight="viewSize.height.value"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref, Ref } from "vue";
 import HomeBackGround from "@/components/home/HomeBackGround.vue";
+import { useElementSize } from "@vueuse/core";
+
+interface ElementSize {
+  width: Ref<number>;
+  height: Ref<number>;
+}
+
+const view = ref(null);
+const intro_container = ref(null);
+const viewSize: ElementSize = useElementSize(view);
 </script>

@@ -1,0 +1,1 @@
+export { HomeScreenWords } from "./HomeScreenWords";
