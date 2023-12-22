@@ -1,6 +1,5 @@
 <template>
   <div class="home h-full">
-    <HomeBackGround />
     <div
       class="introduction-container flex flex-col items-start h-full justify-center w-full"
     >
@@ -24,11 +23,12 @@
         to my
       </span>
       <span
-        class="font-bold leading-relaxed self-center text-7xl md:text-8xl lg:text-9xl bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent pb-3"
+        class="font-bold leading-relaxed self-center text-7xl md:text-8xl lg:text-9xl bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent pb-5"
       >
         homepage
       </span>
     </div>
+    <HomeBackGround />
   </div>
 </template>
 
