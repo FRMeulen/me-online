@@ -4,7 +4,7 @@
       v-for="word in displayedWords"
       :key="word.text"
       :style="word.style"
-      class="text-slate-400"
+      class="text-slate-400 text-xl"
     >
       {{ word.text }}
     </div>
