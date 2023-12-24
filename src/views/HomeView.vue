@@ -1,5 +1,5 @@
 <template>
-  <div class="home h-full" ref="view">
+  <div class="home h-full overflow-hidden" ref="view">
     <div
       class="introduction-container h-full w-fit flex flex-col justify-center items-center m-auto"
       ref="intro_container"

@@ -1,5 +1,5 @@
 <template>
-  <div class="sandbox bg-slate-500 text-center">
+  <div class="sandbox h-full overflow-hidden bg-slate-500 text-center">
     <h1>Sandbox page</h1>
     <CardGrid :rows="3" :columns="4" />
   </div>
