@@ -1,5 +1,5 @@
 {
-  "name": "bunny-bar",
+  "name": "me-online",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,11 +11,14 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@vueuse/core": "^10.7.0",
     "autoprefixer": "^10.4.8",
     "core-js": "^3.24.1",
+    "pinia": "^2.1.7",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8",
     "vue": "^3.2.13",
@@ -26,8 +29,8 @@
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-e2e-cypress": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",

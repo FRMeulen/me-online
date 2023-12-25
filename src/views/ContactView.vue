@@ -1,7 +1,5 @@
 <template>
-  <div class="contact">
-    <h1>Contact page :)</h1>
-  </div>
+  <div class="contact h-full overflow-hidden"></div>
 </template>
 
 <script setup lang="ts"></script>
