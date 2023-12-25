@@ -64,7 +64,7 @@ const addWord = (): void => {
 const getSuitableXPos = (): number => {
   const sideBarOffset = 75;
   const x: number = getRandomPos(props.viewWidth, sideBarOffset);
-  return x < 125 ? 125 : x;
+  return x < 125 ? 125 : x > props.viewWidth - 30 ? props.viewWidth - 30 : x;
 };
 
 const getSuitableYPos = (avoidCenter: boolean): number => {
@@ -79,7 +79,7 @@ const getSuitableYPos = (avoidCenter: boolean): number => {
     overlap = avoidCenter && yInCenter;
   }
 
-  return y < 5 ? 5 : y;
+  return y < 5 ? 5 : y > props.viewHeight - 30 ? props.viewHeight - 30 : y;
 };
 
 const getRandomPos = (axisLength: number, offset: number): number => {
