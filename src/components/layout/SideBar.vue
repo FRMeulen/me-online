@@ -21,22 +21,31 @@
         @click="navigate('about')"
       />
       <SideBarIcon
-        icon-name="fa-solid fa-envelope"
-        button-name="Contact"
-        @click="navigate('contact')"
-      />
-      <SideBarIcon
         icon-name="fa-solid fa-coffee"
         button-name="Sandbox"
         @click="navigate('sandbox')"
       />
     </div>
-    <div class="sidebar-footer">Sidebar footer</div>
+    <div class="sidebar-footer flex flex-col">
+      <div class="bg-primary w-full h-0.5"></div>
+      <span class="self-center">Contact</span>
+      <div class="socials-icons-container flex flex-row">
+        <SocialsIcon
+          icon-name="fa-brands fa-github"
+          url="https://github.com/FRMeulen"
+        />
+        <SocialsIcon
+          icon-name="fa-brands fa-linkedin"
+          url="https://www.linkedin.com/in/frmeulen/"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import SideBarIcon from "@/components/SideBar/SideBarIcon.vue";
+import SocialsIcon from "@/components/SideBar/SocialsIcon.vue";
 import router from "@/router";
 
 const navigate = (view: string) => {
