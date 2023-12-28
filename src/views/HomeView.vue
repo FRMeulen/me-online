@@ -47,6 +47,5 @@ interface ElementSize {
 }
 
 const view = ref(null);
-const intro_container = ref(null);
 const viewSize: ElementSize = useElementSize(view);
 </script>
