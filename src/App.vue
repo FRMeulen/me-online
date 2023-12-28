@@ -13,13 +13,6 @@
 
 <script setup lang="ts">
 import SideBar from "./components/layout/SideBar.vue";
-import { onMounted } from "vue";
-let width = 0;
-
-onMounted(() => {
-  width = window.innerWidth;
-  console.log(width);
-});
 </script>
 
 <style>
