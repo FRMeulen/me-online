@@ -9,7 +9,7 @@
            bg-bgaccent text-primary hover:bg-secondary hover:text-white
            rounded-3xl hover:rounded-xl
            transition-all duration-300 ease-linear
-           cursor-pointer;
+           cursor-pointer text-center;
   }
 
   .sidebar-footer {
