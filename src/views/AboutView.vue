@@ -1,7 +1,9 @@
 <template>
   <div class="about h-full overflow-hidden">
-    <h1>About page :)</h1>
+    <ProfileCard />
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ProfileCard from "@/components/about/ProfileCard.vue";
+</script>
