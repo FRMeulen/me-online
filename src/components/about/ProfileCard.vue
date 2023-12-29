@@ -10,7 +10,11 @@
       <div class="bg-gradient-to-r from-primary to-secondary w-1/2 h-1"></div>
     </div>
     <div class="text-container m-2 debug-green">
-      <span>My name is Falco, and I'm {{ age }} years old.</span>
+      <p>
+        My name is Falco, and I'm a {{ age }}-year-old fullstack software
+        developer from the Netherlands.
+      </p>
+      <p>I am friendly, helpful, and eager to learn.</p>
     </div>
   </div>
 </template>
@@ -19,6 +23,13 @@
 import { computed } from "vue";
 
 const age = computed(() => {
-  return new Date().getFullYear() - 1998;
+  const date = new Date();
+  const currentYear = date.getFullYear();
+  const currentMonth = date.getMonth();
+  const currentDay = date.getDate();
+  const pastBirthDay =
+    currentMonth > 5 || (currentMonth == 5 && currentDay >= 29);
+
+  return pastBirthDay ? currentYear - 1998 : currentYear - 1999;
 });
 </script>
