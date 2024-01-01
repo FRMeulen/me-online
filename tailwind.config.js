@@ -10,6 +10,7 @@ module.exports = {
         bgaccent: "#40444a",
         primary: "#57b3ad",
         secondary: "#348c6a",
+        accent: "#63dbad",
       },
     },
   },
