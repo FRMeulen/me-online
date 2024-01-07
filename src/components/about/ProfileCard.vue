@@ -21,7 +21,7 @@
       <div class="hobbies-container flex flex-row w-fit mx-auto">
         <HobbyCard
           v-for="hobby in Hobbies"
-          v-bind:key="hobby.code"
+          :key="hobby.code"
           :hobby-name="hobby.hobbyName"
           :icon-name="hobby.iconName"
         />
