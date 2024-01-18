@@ -17,12 +17,14 @@ import {
   faGamepad,
   faPersonWalking,
   faCode,
-  faDiceFive,
-  faBeer
+  faDice,
+  faBeer,
+  faMusic,
+  faPaw,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faHouse, faQuestion, faEnvelope, faCoffee, faArrowUpRightDots, faGamepad, faPersonWalking, faCode, faDiceFive, faBeer);
+library.add(faHouse, faQuestion, faEnvelope, faCoffee, faArrowUpRightDots, faGamepad, faPersonWalking, faCode, faDice, faBeer, faMusic, faPaw);
 library.add(faGithub, faLinkedin);
 
 createApp(App)

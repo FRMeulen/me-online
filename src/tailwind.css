@@ -23,4 +23,16 @@
   .debug-green {
     @apply border-2 border-green-500
   }
+
+  .debug-blue {
+    @apply border-2 border-blue-400
+  }
+
+  .debug-yellow {
+    @apply border-2 border-yellow-300
+  }
+
+  .debug-violet {
+    @apply border-2 border-violet-500
+  }
 }

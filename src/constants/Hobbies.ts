@@ -21,13 +21,23 @@ export const Hobbies: Hobby[] = [
   },
   {
     code: "boardCardGames",
-    iconName: "fa-solid fa-dice-five",
+    iconName: "fa-solid fa-dice",
     hobbyName: "Board / Card Games",
   },
   {
     code: "parties",
     iconName: "fa-solid fa-beer",
     hobbyName: "Parties",
+  },
+  {
+    code: "music",
+    iconName: "fa-solid fa-music",
+    hobbyName: "Music",
+  },
+  {
+    code: "pet",
+    iconName: "fa-solid fa-paw",
+    hobbyName: "Caring for Simba",
   },
 ];
 
