@@ -45,7 +45,7 @@
         </div>
       </div>
       <div
-        class="skill-bars-container flex flex-col w-3/4 px-1 rounded-r-xl bg-slate-500 border-primary border-y-4 border-r-4"
+        class="skill-bars-container flex flex-col w-3/4 px-1 rounded-r-xl bg-slate-500 border-primary border-y-4 border-r-4 justify-evenly"
       >
         <SkillBar
           v-for="skill in skillsByTab(selectedTab)"
