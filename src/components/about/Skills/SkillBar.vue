@@ -1,6 +1,6 @@
 <template>
   <div
-    class="skill-bar bg-bgsecondary rounded-xl w-1/2 border-2 border-secondary"
+    class="skill-bar bg-bgsecondary rounded-xl w-full border-2 border-secondary my-0.5"
   >
     <div class="flex flex-col">
       <span class="text-xl m-1 ml-3">{{ name }}</span>

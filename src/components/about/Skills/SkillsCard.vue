@@ -11,55 +11,69 @@
       <div class="bg-gradient-to-r from-secondary to-primary w-1/2 h-1"></div>
       <div class="bg-gradient-to-r from-primary to-secondary w-1/2 h-1"></div>
     </div>
-    <div class="skills-text-container text-xl m-2 h-full">
+    <div class="skills-text-container flex flex-row text-xl m-2 h-full">
       <div
         class="skills-category-tabs flex flex-col flex-grow w-1/4 h-full rounded-tl-xl rounded-bl-xl border-primary border-4 bg-slate-600"
       >
         <div
           class="backend-tab skill-tab"
-          @click="onTabClick('backend')"
-          :class="activeState('backend')"
+          @click="onTabClick(SkillCategory.Backend)"
+          :class="activeState(SkillCategory.Backend)"
         >
           <span>Backend</span>
         </div>
         <div
           class="frontend-tab skill-tab"
-          @click="onTabClick('frontend')"
-          :class="activeState('frontend')"
+          @click="onTabClick(SkillCategory.Frontend)"
+          :class="activeState(SkillCategory.Frontend)"
         >
           <span>Frontend</span>
         </div>
         <div
           class="infra-tab skill-tab"
-          @click="onTabClick('infra')"
-          :class="activeState('infra')"
+          @click="onTabClick(SkillCategory.Infrastructure)"
+          :class="activeState(SkillCategory.Infrastructure)"
         >
           <span>Infrastructure</span>
         </div>
         <div
           class="language-tab skill-tab"
-          @click="onTabClick('language')"
-          :class="activeState('language')"
+          @click="onTabClick(SkillCategory.Language)"
+          :class="activeState(SkillCategory.Language)"
         >
           <span>Language</span>
         </div>
+      </div>
+      <div
+        class="skill-bars-container flex flex-col w-3/4 px-1 rounded-r-xl bg-slate-500 border-primary border-y-4 border-r-4"
+      >
+        <SkillBar
+          v-for="skill in skillsByTab(selectedTab)"
+          :key="skill.code"
+          :name="skill.skillName"
+          :percentage="skill.percentage"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import SkillBar from "@/components/about/Skills/SkillBar.vue";
+import { SkillCategory } from "@/enums/SkillCategory";
+import { Skills } from "@/constants";
+import { computed, ref } from "vue";
 
-let selectedTab = "";
+let selectedTab = ref(0);
 
-const activeState = computed(
-  () => (tab: string) => isActive(tab) ? "active" : "inactive",
-);
+const skillsByTab = computed(() => (tab: SkillCategory) => {
+  return Skills.filter((skill) => skill.category === tab);
+});
 
-const isActive = (tab: string) => selectedTab === tab;
+const activeState = (tab: SkillCategory) =>
+  selectedTab.value === tab ? "tab-active" : "tab-inactive";
 
-const onTabClick = (tab: string) => {
-  selectedTab = tab;
+const onTabClick = (tab: SkillCategory) => {
+  selectedTab.value = tab;
 };
 </script>
