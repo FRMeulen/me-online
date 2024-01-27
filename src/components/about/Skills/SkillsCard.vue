@@ -13,7 +13,7 @@
     </div>
     <div class="skills-text-container flex flex-row text-xl m-2 h-full">
       <div
-        class="skills-category-tabs flex flex-col flex-grow w-1/4 h-full rounded-tl-xl rounded-bl-xl border-primary border-4 bg-slate-600"
+        class="skills-category-tabs flex flex-col flex-grow w-1/4 h-full rounded-tl-xl rounded-bl-xl border-primary border-4"
       >
         <div
           class="backend-tab skill-tab"
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div
-        class="skill-bars-container flex flex-col w-3/4 px-1 rounded-r-xl bg-slate-500 border-primary border-y-4 border-r-4 justify-evenly"
+        class="skill-bars-container flex flex-col w-3/4 px-1 rounded-r-xl bg-bgtertiary border-primary border-y-4 border-r-4 justify-evenly"
       >
         <SkillBar
           v-for="skill in skillsByTab(selectedTab)"
