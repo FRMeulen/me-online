@@ -25,7 +25,7 @@
   }
 
   .tab-active {
-    @apply bg-highlight
+    @apply bg-highlight border-t-2 border-b-2 border-white
   }
 
   .debug-red {
