@@ -11,10 +11,24 @@
       <div class="bg-gradient-to-r from-secondary to-primary w-1/2 h-1"></div>
       <div class="bg-gradient-to-r from-primary to-secondary w-1/2 h-1"></div>
     </div>
-    <div class="profile-text-container text-xl m-2 h-full">
-      <p>Itsa me, Mario!</p>
+    <div class="profile-box flex flex-row text-xl m-2 h-full">
+      <div class="text-container w-4/5">
+        <p>
+          My name is <ColorWord word="Falco" />, and I'm a medior
+          <ColorWord word="full-stack developer" /> from the Netherlands.
+        </p>
+      </div>
+      <div class="portrait-container w-1/5 flex justify-end">
+        <img
+          class="portrait self-end"
+          alt="Portrait"
+          src="@/assets/portrait.png"
+        />
+      </div>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import ColorWord from "@/components/about/Profile/ColorWord.vue";
+</script>
