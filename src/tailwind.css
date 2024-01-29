@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .sidebar-icon {
+  .page-button {
     @apply relative flex items-center justify-center
            h-12 w-28 my-4 mx-auto shadow-lg
            bg-bgaccent text-primary hover:bg-secondary hover:text-white

@@ -10,17 +10,17 @@
       </div>
     </div>
     <div class="button-container">
-      <SideBarIcon
+      <PageButton
         icon-name="fa-solid fa-house"
         button-name="Home"
         @click="navigate('home')"
       />
-      <SideBarIcon
+      <PageButton
         icon-name="fa-solid fa-question"
         button-name="About"
         @click="navigate('about')"
       />
-      <SideBarIcon
+      <PageButton
         icon-name="fa-solid fa-coffee"
         button-name="Sandbox"
         @click="navigate('sandbox')"
@@ -44,7 +44,7 @@
 </template>
 
 <script setup lang="ts">
-import SideBarIcon from "@/components/SideBar/SideBarIcon.vue";
+import PageButton from "@/components/SideBar/PageButton.vue";
 import SocialsIcon from "@/components/SideBar/SocialsIcon.vue";
 import router from "@/router";
 
