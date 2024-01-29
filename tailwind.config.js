@@ -7,13 +7,16 @@ module.exports = {
       colors: {
         bgprimary: "#2d2f33",
         bgsecondary: "#1e1e21",
-        bgtertiary: "#28332f",
+        bgtertiary: "#29302e",
         bgaccent: "#40444a",
         primary: "#57b3ad",
         secondary: "#348c6a",
         tertiary: "#51545c",
         accent: "#63dbad",
         highlight: "#66bd99",
+      },
+      scale: {
+        "-100": "-1",
       },
     },
   },
