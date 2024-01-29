@@ -9,11 +9,23 @@
            bg-bgaccent text-primary hover:bg-secondary hover:text-white
            rounded-3xl hover:rounded-xl
            transition-all duration-300 ease-linear
-           cursor-pointer;
+           cursor-pointer text-center;
   }
 
   .sidebar-footer {
     @apply text-primary
+  }
+
+  .skill-tab {
+    @apply flex h-1/4 w-full items-center justify-center hover:bg-highlight
+  }
+
+  .tab-inactive {
+    @apply bg-tertiary
+  }
+
+  .tab-active {
+    @apply bg-highlight border-t-2 border-b-2 border-white
   }
 
   .debug-red {
@@ -22,5 +34,17 @@
 
   .debug-green {
     @apply border-2 border-green-500
+  }
+
+  .debug-blue {
+    @apply border-2 border-blue-400
+  }
+
+  .debug-yellow {
+    @apply border-2 border-yellow-300
+  }
+
+  .debug-violet {
+    @apply border-2 border-violet-500
   }
 }
