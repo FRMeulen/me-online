@@ -17,6 +17,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "sandbox",
     component: () => import("@/views/SandBoxView.vue"),
   },
+  {
+    path: "/experience",
+    name: "experience",
+    component: () => import("@/views/ExperienceView.vue"),
+  },
 ];
 
 const router = createRouter({

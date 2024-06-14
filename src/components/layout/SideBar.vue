@@ -21,6 +21,11 @@
         @click="navigate('about')"
       />
       <PageButton
+        icon-name="fa-solid fa-clipboard-list"
+        button-name="Experience"
+        @click="navigate('experience')"
+      />
+      <PageButton
         icon-name="fa-solid fa-coffee"
         button-name="Sandbox"
         @click="navigate('sandbox')"

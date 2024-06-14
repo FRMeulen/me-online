@@ -11,8 +11,8 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
   faHouse,
   faQuestion,
-  faEnvelope,
   faCoffee,
+  faClipboardList,
   faArrowUpRightDots,
   faGamepad,
   faPersonWalking,
@@ -24,7 +24,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faHouse, faQuestion, faEnvelope, faCoffee, faArrowUpRightDots, faGamepad, faPersonWalking, faCode, faDice, faBeer, faMusic, faPaw);
+library.add(faHouse, faQuestion, faCoffee, faClipboardList);
+library.add(faArrowUpRightDots, faGamepad, faPersonWalking, faCode, faDice, faBeer, faMusic, faPaw);
 library.add(faGithub, faLinkedin);
 
 createApp(App)

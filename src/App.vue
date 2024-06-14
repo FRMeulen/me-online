@@ -1,8 +1,11 @@
 <template>
   <div class="flex flex-row z-50">
     <SideBar />
-    <div class="min-h-screen max-h-screen bg-bgprimary w-full flex flex-col">
-      <RouterView class="router-view m-2 text-white" v-slot="{ Component }">
+    <div class="bg-bgprimary w-screen h-screen flex flex-col relative">
+      <RouterView
+        class="router-view flex m-2 text-white"
+        v-slot="{ Component }"
+      >
         <Transition name="page-flipbook" mode="out-in">
           <component :is="Component"></component>
         </Transition>
