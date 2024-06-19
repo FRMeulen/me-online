@@ -23,6 +23,7 @@ import {
   faPaw,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import "../node_modules/flowbite-vue/dist/index.css"
 
 library.add(faHouse, faQuestion, faCoffee, faClipboardList);
 library.add(faArrowUpRightDots, faGamepad, faPersonWalking, faCode, faDice, faBeer, faMusic, faPaw);
