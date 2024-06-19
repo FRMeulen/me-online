@@ -51,7 +51,9 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 import ColorWord from "@/components/about/Profile/ColorWord.vue";
-import { Secrets } from "@/constants";
+
+const bMonth = 5;
+const bDay = 29;
 
 const date = new Date();
 const year = date.getFullYear();
@@ -59,9 +61,7 @@ const month = date.getMonth();
 const day = date.getDate();
 
 const age = computed(() => {
-  const pastBirthDay =
-    month > Secrets.birthMonth ||
-    (month == Secrets.birthMonth && day > Secrets.birthDay);
+  const pastBirthDay = month > bMonth || (month == bMonth && day > bDay);
   return pastBirthDay ? year - 1998 : year - 1999;
 });
 </script>

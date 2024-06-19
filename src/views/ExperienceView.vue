@@ -1,25 +1,22 @@
 <template>
   <div class="experience-education h-full flex flex-col">
-    <div class="experience-box flex h-2/5 w-full">
-      <span class="experience">Experience</span>
-    </div>
-    <div
-      class="time-bar flex items-stretch h-1/5 w-full justify-center bg-bgaccent rounded-xl border-secondary border-2"
-    >
-      <TimeBar :start="birthYear" :end="currentYear" />
-    </div>
-    <div class="education-box flex h-2/5 w-full">
-      <span class="education">Education</span>
+    <div class="education-box flex mt-2 h-full w-full">
+      <fwb-timeline class="m-2">
+        <TimeBarEntry
+          class="my-8"
+          v-for="moment in Moments"
+          :key="moment.code"
+          :time="moment.time"
+          :title="moment.title"
+          :subtitle="moment.subtitle"
+        />
+      </fwb-timeline>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
-import TimeBar from "@/components/experience/TimeBar.vue";
-
-const birthYear = 1998;
-const currentYear = computed(() => {
-  return new Date().getFullYear();
-});
+import { FwbTimeline } from "flowbite-vue";
+import TimeBarEntry from "@/components/experience/TimeBarEntry.vue";
+import { Moments } from "@/constants";
 </script>
