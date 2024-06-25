@@ -47,4 +47,8 @@
   .debug-violet {
     @apply border-2 border-violet-500
   }
+
+  .timeline {
+    @apply m-2 overflow-y-scroll
+  }
 }
