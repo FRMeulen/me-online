@@ -9,6 +9,8 @@
 <script lang="ts" setup>
 import { ref, watchEffect } from "vue";
 
+const model = defineModel();
+
 const props = defineProps({
   name: String,
   description: String,
