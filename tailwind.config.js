@@ -9,15 +9,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bgprimary: "#2d2f33",
-        bgsecondary: "#1e1e21",
-        bgtertiary: "#29302e",
-        bgaccent: "#40444a",
-        primary: "#57b3ad",
-        secondary: "#348c6a",
-        tertiary: "#51545c",
-        accent: "#63dbad",
-        highlight: "#66bd99",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        tertiary: "var(--tertiary)",
+        accent: "var(--accent)",
+        highlight: "var(--highlight)",
+        bgprimary: "var(--background-primary)",
+        bgsecondary: "var(--background-secondary)",
+        bgtertiary: "var(--background-tertiary)",
+        bgaccent: "var(--background-accent)",
       },
       scale: {
         "-100": "-1",

@@ -2,11 +2,14 @@
   <div
     class="h-screen w-32 p-1 flex flex-col items-center justify-between bg-bgsecondary textsecondary shadow-lg border-r-2 border-primary"
   >
-    <div class="icon-container items-center">
-      <div
-        class="bg-gradient-to-br from-primary via-secondary to-primary rounded-full"
-      >
-        <img alt="Me" class="rounded-full p-1" src="@/assets/me.jpg" />
+    <div>
+      <ThemeSwitcher />
+      <div class="icon-container items-center">
+        <div
+          class="bg-gradient-to-br from-primary via-secondary to-primary rounded-full"
+        >
+          <img alt="Me" class="rounded-full p-1" src="@/assets/me.jpg" />
+        </div>
       </div>
     </div>
     <div class="button-container">
@@ -49,6 +52,7 @@
 </template>
 
 <script setup lang="ts">
+import ThemeSwitcher from "@/components/SideBar/ThemeSwitcher.vue";
 import PageButton from "@/components/SideBar/PageButton.vue";
 import SocialsIcon from "@/components/SideBar/SocialsIcon.vue";
 import router from "@/router";

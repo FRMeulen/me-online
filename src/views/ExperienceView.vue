@@ -20,7 +20,13 @@
         />
       </fwb-timeline>
     </div>
-    <div class="moment-details flex flex-col h-full w-full p-4">
+    <div
+      class="custom-timeline border-2 p-4 flex flex-col h-full w-fit"
+      v-if="debug"
+    >
+      <TimeLine />
+    </div>
+    <div class="moment-details flex flex-col h-full w-full p-4" v-if="!debug">
       <TransitionGroup name="fade-slide">
         <MomentDetails
           v-for="moment in filteredMoments"
@@ -35,16 +41,20 @@
 
 <script lang="ts" setup>
 import { FwbTimeline } from "flowbite-vue";
-import TimeBarEntry from "@/components/experience/TimeBarEntry.vue";
 import { Moments } from "@/constants";
 import { ref, computed, Ref } from "vue";
-import MomentDetails from "@/components/experience/MomentDetails.vue";
 import { useElementSize } from "@vueuse/core";
+
+import TimeLine from "@/components/experience/TimeLine.vue";
+import TimeBarEntry from "@/components/experience/TimeBarEntry.vue";
+import MomentDetails from "@/components/experience/MomentDetails.vue";
 
 interface ElementSize {
   width: Ref<number>;
   height: Ref<number>;
 }
+
+const debug = true;
 
 let selectedMoment = ref("");
 let scrollPosition = ref(0);
