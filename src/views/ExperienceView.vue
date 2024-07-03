@@ -20,14 +20,12 @@
         />
       </fwb-timeline>
     </div>
-    <div class="moment-details flex flex-col h-full w-full p-4 debug-green">
-      <p>{{ scrollPosition }}</p>
+    <div class="moment-details flex flex-col h-full w-full p-4">
       <TransitionGroup name="fade-slide">
         <MomentDetails
           v-for="moment in filteredMoments"
           :key="moment.code"
-          :title="moment.title"
-          :description="moment.description"
+          :moment="moment"
           :show-file-list="false"
         ></MomentDetails>
       </TransitionGroup>
@@ -55,8 +53,6 @@ const timeline = ref(null);
 const timelineSize: ElementSize = useElementSize(timeline);
 
 const maxScroll = computed(() => {
-  console.log(timelineSize.height.value);
-  console.log(timelineSize.height.value * -0.1);
   return timelineSize.height.value * -0.1;
 });
 
@@ -69,10 +65,10 @@ const filteredMoments = computed(() => {
 });
 
 const handleScroll = (e: WheelEvent) => {
-  if (e.deltaY > 0) {
+  if (e.deltaY < 0) {
     scrollPosition.value =
       scrollPosition.value >= 0 ? 0 : scrollPosition.value + 10;
-  } else if (e.deltaY < 0) {
+  } else if (e.deltaY > 0) {
     scrollPosition.value =
       scrollPosition.value <= maxScroll.value
         ? maxScroll.value
