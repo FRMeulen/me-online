@@ -53,6 +53,6 @@ onMounted(() => {
   height: 0;
   position: fixed;
   border: solid 10px;
-  border-color: transparent #57b3ad transparent transparent;
+  border-color: transparent var(--primary) transparent transparent;
 }
 </style>
