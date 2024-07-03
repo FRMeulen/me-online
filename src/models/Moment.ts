@@ -4,4 +4,5 @@ export class Moment {
   title = "";
   subtitle = "";
   description = "";
+  location = "";
 }
