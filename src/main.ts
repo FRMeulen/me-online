@@ -22,7 +22,6 @@ import {
   faPaw,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import "../node_modules/flowbite-vue/dist/index.css"
 import { createPinia } from "pinia";
 
 library.add(faHouse, faQuestion, faCoffee, faClipboardList);
