@@ -1,61 +1,42 @@
 <template>
-  <div class="flex flex-row mb-8" :class="code + '-entry'">
-    <div class="flex flex-col justify-center">
-      <div class="entry-dot bg-textprimary w-3 h-3 rounded-3xl"></div>
-      <div class="triangle ml-3"></div>
+  <div
+    class="flex flex-col w-full h-full justify-between items-center border-secondary border-2 rounded-3xl p-2 bg-bgaccent hover:bg-highlight"
+    @mouseenter="selectMoment"
+    :class="model.code + '-entry'"
+  >
+    <div class="entry-time-start text-secondary">{{ model.start }}</div>
+    <div class="entry-title text-textprimary text-xl font-semibold">
+      {{ model.title }}
     </div>
-    <div
-      class="entry-box ml-8 p-2 border-primary border-2 rounded-xl w-full hover:bg-bgaccent"
-      @mouseenter="selectMoment"
-    >
-      <div class="entry-time text-secondary italic text-sm mt-2">
-        {{ time }}
-      </div>
-      <div class="entry-title text-textprimary text-2xl font-smibold">
-        {{ title }}
-      </div>
-      <div class="entry-subtitle text-primary mb-2">
-        {{ subtitle }}
-      </div>
-    </div>
+    <div class="entry-time-end text-secondary">{{ model.end }}</div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, defineEmits } from "vue";
+import { Moment } from "@/models";
+import { defineEmits, PropType } from "vue";
 
-const props = defineProps({
-  code: String,
-  time: String,
-  title: String,
-  subtitle: String,
+const model = defineModel({
+  type: Object as PropType<Moment>,
+  required: true,
+  default: new Moment(),
 });
-
-const code = ref(props.code);
-const time = ref(props.time);
-const title = ref(props.title);
-const subtitle = ref(props.subtitle);
 
 const emit = defineEmits<{
   (e: "onSelect", code: string): string;
 }>();
 
 const selectMoment = () => {
-  emit("onSelect", code.value as string);
+  emit("onSelect", model.value.code as string);
 };
 </script>
 
 <style scoped>
-.entry-dot {
-  margin-left: -6px;
-  position: fixed;
-}
-
 .triangle {
   width: 0;
   height: 0;
-  position: fixed;
+  position: relative;
   border: solid 10px;
-  border-color: transparent var(--primary) transparent transparent;
+  border-color: var(--primary) transparent transparent transparent;
 }
 </style>

@@ -1,6 +1,7 @@
 export class Moment {
   code = "";
-  time = "";
+  start = "";
+  end = "";
   title = "";
   subtitle = "";
   description = "";

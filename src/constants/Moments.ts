@@ -3,8 +3,9 @@ import { Moment } from "@/models";
 const Education: Moment[] = [
   {
     code: "middleschool",
-    time: "August 2010 -- July 2016",
-    title: "Pre-University Education",
+    start: "August 2010",
+    end: "July 2016",
+    title: "Pre-University",
     subtitle: "Penta College CSG Scala Rietvelden",
     description: `General education to prepare for university or college.
                   The subject set I chose focused on mathematics, physics, and chemistry.
@@ -13,8 +14,9 @@ const Education: Moment[] = [
   },
   {
     code: "bachelor",
-    time: "August 2016 -- July 2020",
-    title: "Bachelor of Computer Engineering",
+    start: "August 2016",
+    end: "July 2020",
+    title: "Bachelor's Degree",
     subtitle: "Rotterdam University of Applied Sciences",
     description: `During my bachelor of Computer Engineering I was taught skills for both software and hardware.
                   Programming languages included Java, C++, and Haskell.
@@ -26,7 +28,8 @@ const Education: Moment[] = [
 const Experience: Moment[] = [
   {
     code: "peercoach",
-    time: "August 2017 -- July 2018",
+    start: "August 2017",
+    end: "July 2018",
     title: "Peercoach",
     subtitle: "Rotterdam University of Applied Sciences",
     description: `A peercoach can be described as a student helper. In my second year I guided and supported
@@ -36,7 +39,8 @@ const Experience: Moment[] = [
   },
   {
     code: "internship",
-    time: "September 2018 -- January 2019",
+    start: "September 2018",
+    end: "January 2019",
     title: "Student Internship",
     subtitle: "Cornerstone Technology B.V.",
     description: `The student internship provided me with my first professional programming experience.
@@ -46,7 +50,8 @@ const Experience: Moment[] = [
   },
   {
     code: "graduation",
-    time: "February 2020 -- July 2020",
+    start: "February 2020",
+    end: "July 2020",
     title: "Graduation Internship",
     subtitle: "Alten Nederland",
     description: `Alten Nederland recruited me for my graduation internship, where I worked on an anti-poaching
@@ -56,7 +61,8 @@ const Experience: Moment[] = [
   },
   {
     code: "brunel",
-    time: "October 2020 -- Now",
+    start: "October 2020",
+    end: "Now",
     title: "IT-Specialist",
     subtitle: "Brunel Nederland",
     description: `After my studies, Brunel hired me as an IT-specialist. In detachment to clients at first,
