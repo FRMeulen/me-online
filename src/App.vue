@@ -3,7 +3,7 @@
     <SideBar />
     <div class="bg-bgprimary w-screen h-screen flex flex-col relative">
       <RouterView
-        class="router-view flex m-2 text-white"
+        class="router-view flex m-2 text-textprimary"
         v-slot="{ Component }"
       >
         <Transition name="page-flipbook" mode="out-in">

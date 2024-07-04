@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-row border-white m-1 py-2 hover:py-5 border-2 rounded-xl bg-bgprimary hover:bg-primary transition-all ease-linear duration-200 group"
+    class="flex flex-row border-textprimary m-1 py-2 hover:py-5 border-2 rounded-xl bg-bgprimary hover:bg-primary transition-all ease-linear duration-200 group"
     :class="hobby"
   >
     <font-awesome-icon
