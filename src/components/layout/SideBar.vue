@@ -2,8 +2,7 @@
   <div
     class="h-screen w-32 p-1 flex flex-col items-center justify-between bg-bgsecondary textsecondary shadow-lg border-r-2 border-primary"
   >
-    <div>
-      <ThemeSwitcher />
+    <div class="flex flex-col items-center">
       <div class="icon-container items-center">
         <div
           class="bg-gradient-to-br from-primary via-secondary to-primary rounded-full"
@@ -11,6 +10,7 @@
           <img alt="Me" class="rounded-full p-1" src="@/assets/me.jpg" />
         </div>
       </div>
+      <ThemeSwitcher class="w-16" />
     </div>
     <div class="button-container">
       <PageButton
