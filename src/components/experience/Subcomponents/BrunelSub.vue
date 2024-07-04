@@ -8,10 +8,4 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { onMounted } from "vue";
-
-onMounted(() => {
-  console.log("Brunel sub-component mounted.");
-});
-</script>
+<script lang="ts" setup></script>
