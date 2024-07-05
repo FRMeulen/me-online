@@ -44,7 +44,7 @@ const Experience: Moment[] = [
     title: "Student Internship",
     subtitle: "Cornerstone Technology B.V.",
     description: `The student internship provided me with my first professional programming experience.
-                  Cornerstone specialises in the conversion of software to a different language, and were
+                  Cornerstone specialises in the conversion of software to a different language. They were
                   working on a big PL/1 to Java project during my time there.`,
     location: "Dordrecht",
   },
