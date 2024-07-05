@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 import { Moment } from "@/models";
-import { defineEmits, PropType } from "vue";
+import { PropType, ref } from "vue";
 
 const model = defineModel({
   type: Object as PropType<Moment>,
@@ -22,12 +22,17 @@ const model = defineModel({
   default: new Moment(),
 });
 
+const props = defineProps({
+  number: Number,
+});
+const number = ref(props.number);
+
 const emit = defineEmits<{
-  (e: "onSelect", code: string): string;
+  (e: "onSelect", number: number): number;
 }>();
 
 const selectMoment = () => {
-  emit("onSelect", model.value.code as string);
+  emit("onSelect", number.value as number);
 };
 </script>
 

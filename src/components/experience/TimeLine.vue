@@ -6,23 +6,43 @@
     >
       <!-- TODO: Animate scrolling. -->
       <div class="h-1/5 w-full">
-        <TimeLineEntry v-model="moments[0]" @on-select="selectMoment" />
+        <TimeLineEntry
+          :number="0"
+          v-model="moments[0]"
+          @on-select="selectMoment"
+        />
       </div>
       <div class="small-triangle-down"></div>
       <div class="h-1/5 w-full">
-        <TimeLineEntry v-model="moments[1]" @on-select="selectMoment" />
+        <TimeLineEntry
+          :number="1"
+          v-model="moments[1]"
+          @on-select="selectMoment"
+        />
       </div>
       <div class="small-triangle-down"></div>
       <div class="h-1/5 w-full">
-        <TimeLineEntry v-model="moments[2]" @on-select="selectMoment" />
+        <TimeLineEntry
+          :number="2"
+          v-model="moments[2]"
+          @on-select="selectMoment"
+        />
       </div>
       <div class="small-triangle-down"></div>
       <div class="h-1/5 w-full">
-        <TimeLineEntry v-model="moments[3]" @on-select="selectMoment" />
+        <TimeLineEntry
+          :number="3"
+          v-model="moments[3]"
+          @on-select="selectMoment"
+        />
       </div>
       <div class="small-triangle-down"></div>
       <div class="h-1/5 w-full">
-        <TimeLineEntry v-model="moments[4]" @on-select="selectMoment" />
+        <TimeLineEntry
+          :number="4"
+          v-model="moments[4]"
+          @on-select="selectMoment"
+        />
       </div>
     </div>
     <div class="triangle-down mt-8 h-fit"></div>
@@ -34,7 +54,7 @@ import { Moments } from "@/constants";
 import { computed, ref } from "vue";
 import TimeLineEntry from "./TimeLineEntry.vue";
 
-const selectedMoment = ref("");
+const selectedSlot = ref(0);
 const scrollPos = ref(0);
 
 const upColor = computed(() => {
@@ -55,13 +75,14 @@ const emit = defineEmits<{
   (e: "onSelect", code: string): string;
 }>();
 
-const selectMoment = (code: string) => {
-  selectedMoment.value = code;
-  emit("onSelect", code);
+const selectMoment = (number: number) => {
+  selectedSlot.value = number;
+  emit("onSelect", moments.value[number].code);
 };
 
 const scroll = (e: WheelEvent) => {
   if (e.deltaY > 0) {
+    console.log("Scroll down");
     scrollPos.value =
       scrollPos.value >= Moments.length - 5
         ? Moments.length - 5
@@ -69,6 +90,8 @@ const scroll = (e: WheelEvent) => {
   } else {
     scrollPos.value = scrollPos.value <= 0 ? 0 : scrollPos.value - 1;
   }
+
+  emit("onSelect", moments.value[selectedSlot.value].code);
 };
 </script>
 
