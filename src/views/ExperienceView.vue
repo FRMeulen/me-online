@@ -11,7 +11,7 @@
           v-for="moment in filteredMoments"
           :key="moment.code"
           :moment="moment"
-          :show-file-list="false"
+          class="flex"
         ></MomentDetails>
       </TransitionGroup>
     </div>

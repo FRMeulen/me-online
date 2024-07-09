@@ -1,22 +1,25 @@
 <template>
-  <div>
+  <div
+    class="flex flex-col justify-center w-full h-full box-border border-2 border-primary rounded-xl bg-bgsecondary"
+  >
     <div
-      class="py-2 details-box bg-bgsecondary rounded-xl border-2 border-primary"
+      class="flex flex-row flex-grow justify-between max-h-16 m-1 text-secondary pl-4"
     >
-      <span class="text-5xl text-secondary pl-4">{{ moment.title }}</span>
-      <div class="w-full h-2 flex mt-4 bg-gray-400"></div>
-      <div class="text-box w-full h-full m-2 text-center">
-        <p class="my-2 text-xl" v-for="(line, index) in textLines" :key="index">
-          {{ line + "." }}
-        </p>
+      <span class="text-5xl">{{ moment.title }}</span>
+      <div class="flex flex-col items-center mr-4">
+        <span class="text-xl border-b-2 border-secondary pb-1">{{
+          moment.start
+        }}</span>
+        <span class="text-xl">{{ moment.end }}</span>
       </div>
     </div>
-    <div
-      class="location-box bg-bgsecondary rounded-xl border-2 border-primary mt-4"
-    >
-      <span class="text-box w-full h-full m-2">
-        {{ moment.location }} -- {{ moment.subtitle }}
-      </span>
+    <div class="w-full h-2 flex bg-bgaccent"></div>
+    <div class="w-full flex flex-row location-box justify-between px-4 pb-1">
+      <span class="text-xl italic">{{ moment.subtitle }}</span>
+      <span class="text-xl italic">{{ moment.location }}</span>
+    </div>
+    <div class="w-full h-2 flex bg-bgaccent"></div>
+    <div class="subcomponent-container flex flex-row flex-grow m-1">
       <component :is="component"></component>
     </div>
   </div>
@@ -25,7 +28,7 @@
 <script lang="ts" setup>
 import { Moment } from "@/models";
 import { useSubcomponentsStore } from "@/store";
-import { PropType, computed, shallowRef } from "vue";
+import { PropType, shallowRef } from "vue";
 
 const props = defineProps({
   moment: { type: Object as PropType<Moment>, required: true },
@@ -34,10 +37,4 @@ const props = defineProps({
 const store = useSubcomponentsStore();
 const moment = props.moment === undefined ? new Moment() : props.moment;
 const component = shallowRef(store.componentFor(moment.code));
-
-const textLines = computed(() => {
-  const array = moment.description.split(".");
-  array?.pop();
-  return array;
-});
 </script>

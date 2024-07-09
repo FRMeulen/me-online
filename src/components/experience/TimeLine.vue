@@ -4,7 +4,6 @@
     <div
       class="flex flex-col items-center justify-between entries-container h-full w-full"
     >
-      <!-- TODO: Animate scrolling. -->
       <div class="h-1/5 w-full">
         <TimeLineEntry
           :number="0"
@@ -82,7 +81,6 @@ const selectMoment = (number: number) => {
 
 const scroll = (e: WheelEvent) => {
   if (e.deltaY > 0) {
-    console.log("Scroll down");
     scrollPos.value =
       scrollPos.value >= Moments.length - 5
         ? Moments.length - 5
