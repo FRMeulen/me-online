@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row z-50">
+  <div class="flex flex-row">
     <SideBar />
     <div class="bg-bgprimary w-screen h-screen flex flex-col relative">
       <RouterView
