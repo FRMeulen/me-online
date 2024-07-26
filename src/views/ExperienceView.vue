@@ -1,7 +1,7 @@
 <template>
   <div class="experience-education h-full flex flex-row">
     <div
-      class="custom-timeline border-2 border-textprimary p-4 flex flex-col h-full w-1/5 md:w-1/4"
+      class="custom-timeline border-2 border-primary rounded-xl p-4 flex flex-col h-full w-1/5 md:w-1/4"
     >
       <TimeLine @on-select="selectMoment" class="flex flex-col" />
     </div>
