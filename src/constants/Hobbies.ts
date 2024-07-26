@@ -1,3 +1,5 @@
+import { Hobby } from "@/models";
+
 export const Hobbies: Hobby[] = [
   {
     code: "bouldering",
@@ -40,9 +42,3 @@ export const Hobbies: Hobby[] = [
     hobbyName: "Caring for Simba",
   },
 ];
-
-class Hobby {
-  code = "";
-  iconName = "";
-  hobbyName = "";
-}

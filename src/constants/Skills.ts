@@ -1,4 +1,5 @@
 import { SkillCategory } from "@/enums/SkillCategory";
+import { Skill } from "@/models";
 
 const backendSkills: Skill[] = [
   {
@@ -114,10 +115,3 @@ export const Skills: Skill[] = [
   ...infraSkills,
   ...languageSkills,
 ];
-
-class Skill {
-  code = "";
-  skillName = "";
-  percentage = 0;
-  category: SkillCategory = SkillCategory.Unspecified;
-}
