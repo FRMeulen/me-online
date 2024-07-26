@@ -52,9 +52,9 @@
 </template>
 
 <script setup lang="ts">
-import ThemeSwitcher from "@/components/SideBar/ThemeSwitcher.vue";
-import PageButton from "@/components/SideBar/PageButton.vue";
-import SocialsIcon from "@/components/SideBar/SocialsIcon.vue";
+import ThemeSwitcher from "@/components/sidebar/ThemeSwitcher.vue";
+import PageButton from "@/components/sidebar/PageButton.vue";
+import SocialsIcon from "@/components/sidebar/SocialsIcon.vue";
 import router from "@/router";
 
 const navigate = (view: string) => {
