@@ -45,6 +45,6 @@ const project = {
   imageName: "simba",
   imagePos: "left",
   paragraphs: ["paragraph 1", "paragraph 2"],
-  keywords: ["keyword 1", "keyword 2", "keyword 3"],
+  keywords: ["TypeScript", "Vue 3", "TailwindCss"],
 };
 </script>

@@ -25,11 +25,7 @@
           <img :src="imagePath" alt="Dynamic Image" />
         </div>
       </div>
-      <div
-        class="row-span-1 flex flex-row debug-blue items-center justify-center"
-      >
-        {{ project.keywords }}
-      </div>
+      <KeywordBar :words="project.keywords" />
     </div>
   </div>
 </template>
@@ -37,6 +33,7 @@
 <script lang="ts" setup>
 import { Project } from "@/models";
 import { computed, PropType } from "vue";
+import KeywordBar from "./KeywordBar.vue";
 
 const props = defineProps({
   project: { type: Object as PropType<Project>, required: true },
