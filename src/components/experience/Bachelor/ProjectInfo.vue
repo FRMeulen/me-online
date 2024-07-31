@@ -39,9 +39,7 @@ const props = defineProps({
   project: { type: Object as PropType<Project>, required: true },
 });
 
-const project = props.project === undefined ? new Project() : props.project;
-
 const imagePath = computed(() => {
-  return require(`@/assets/${project.imageName}.png`);
+  return require(`@/assets/${props.project.imageName}.png`);
 });
 </script>

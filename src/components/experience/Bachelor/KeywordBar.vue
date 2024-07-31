@@ -1,10 +1,19 @@
 <template>
   <div class="sliding-text-bar">
-    <div class="text-wrapper" ref="textWrapper">
+    <div class="text-wrapper w-fit" ref="textWrapper">
       <span
         v-for="(word, index) in words"
         :key="index"
-        class="text-item"
+        class="text-item text-xl mt-4"
+        :style="{ marginRight: spacerMargin + 'px' }"
+      >
+        {{ word }}
+      </span>
+      <!-- Duplicate the words for continuous animation -->
+      <span
+        v-for="(word, index) in words"
+        :key="'duplicate-' + index"
+        class="text-item text-xl mt-4"
         :style="{ marginRight: spacerMargin + 'px' }"
       >
         {{ word }}
@@ -47,10 +56,10 @@ const words = ref(props.words);
 
 @keyframes slide {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 </style>
