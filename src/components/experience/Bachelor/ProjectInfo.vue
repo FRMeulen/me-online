@@ -15,8 +15,16 @@
         >
           <img :src="imagePath" alt="Dynamic Image" />
         </div>
-        <div class="paragraphs-container flex flex-grow">
-          {{ project.paragraphs }}
+        <div
+          class="paragraphs-container flex flex-col flex-grow ml-8 text-xl space-y-4 justify-center"
+        >
+          <p
+            v-for="(paragraph, index) in project.paragraphs"
+            :key="index"
+            class="paragraph h-fit w-full"
+          >
+            {{ paragraph }}
+          </p>
         </div>
         <div
           v-if="project.imagePos == 'right'"
@@ -25,7 +33,9 @@
           <img :src="imagePath" alt="Dynamic Image" />
         </div>
       </div>
-      <KeywordBar :words="project.keywords" />
+      <div class="row-span-1 flex flex-col justify-center">
+        <KeywordBar :words="project.keywords" />
+      </div>
     </div>
   </div>
 </template>
@@ -40,6 +50,6 @@ const props = defineProps({
 });
 
 const imagePath = computed(() => {
-  return require(`@/assets/${props.project.imageName}.png`);
+  return require(`@/assets/project-images/${props.project.imageName}.png`);
 });
 </script>

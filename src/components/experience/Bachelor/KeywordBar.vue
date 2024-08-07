@@ -1,10 +1,12 @@
 <template>
-  <div class="sliding-text-bar">
+  <div
+    class="sliding-text-bar relative overflow-hidden flex items-center h-12 border-t-2 border-secondary"
+  >
     <div class="text-wrapper w-fit" ref="textWrapper">
       <span
         v-for="(word, index) in words"
         :key="index"
-        class="text-item text-xl mt-4"
+        class="text-item text-xl"
         :style="{ marginRight: spacerMargin + 'px' }"
       >
         {{ word }}
@@ -13,7 +15,7 @@
       <span
         v-for="(word, index) in words"
         :key="'duplicate-' + index"
-        class="text-item text-xl mt-4"
+        class="text-item text-xl"
         :style="{ marginRight: spacerMargin + 'px' }"
       >
         {{ word }}
@@ -23,7 +25,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 const spacerMargin = ref(400);
 
@@ -33,7 +35,7 @@ const props = defineProps({
     required: true,
   },
 });
-const words = ref(props.words);
+const words = computed(() => props.words);
 </script>
 
 <style scoped>
