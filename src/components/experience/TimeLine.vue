@@ -5,6 +5,7 @@
       :size="30"
       :color="upColor"
       :margin="1.5"
+      @click="scrollTimelineUp"
     />
     <div
       class="flex flex-col items-center justify-between entries-container h-full w-full"
@@ -54,6 +55,7 @@
       :size="30"
       :color="downColor"
       :margin="1.5"
+      @click="scrollTimelineDown"
     />
   </div>
 </template>
@@ -90,14 +92,22 @@ const selectMoment = (number: number) => {
 
 const scroll = (e: WheelEvent) => {
   if (e.deltaY > 0) {
-    scrollPos.value =
-      scrollPos.value >= Moments.length - 5
-        ? Moments.length - 5
-        : scrollPos.value + 1;
+    scrollTimelineDown();
   } else {
-    scrollPos.value = scrollPos.value <= 0 ? 0 : scrollPos.value - 1;
+    scrollTimelineUp();
   }
 
   emit("onSelect", moments.value[selectedSlot.value].code);
+};
+
+const scrollTimelineDown = () => {
+  scrollPos.value =
+    scrollPos.value >= Moments.length - 5
+      ? Moments.length - 5
+      : scrollPos.value + 1;
+};
+
+const scrollTimelineUp = () => {
+  scrollPos.value = scrollPos.value <= 0 ? 0 : scrollPos.value - 1;
 };
 </script>
