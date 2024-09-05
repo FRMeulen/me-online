@@ -28,6 +28,10 @@
     @apply bg-highlight border-t-2 border-b-2 border-textprimary
   }
 
+  .card {
+    @apply bg-bgaccent border-2 border-secondary rounded-xl
+  }
+
   .debug-red {
     @apply border-2 border-red-600
   }
