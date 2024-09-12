@@ -1,6 +1,6 @@
 import BachelorSub from "@/components/experience/Bachelor/BachelorSub.vue";
 import BrunelProjects from "@/components/experience/Subcomponents/BrunelSub.vue";
-import GraduationSub from "@/components/experience/Subcomponents/GraduationSub.vue";
+import GraduationSub from "@/components/experience/Graduation/GraduationSub.vue";
 import InternshipSub from "@/components/experience/Internship/InternshipSub.vue";
 import MiddleSchoolSub from "@/components/experience/MiddleSchool/MiddleSchoolSub.vue";
 import PeercoachSub from "@/components/experience/Peercoach/PeercoachSub.vue";

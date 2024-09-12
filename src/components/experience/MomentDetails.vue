@@ -3,7 +3,7 @@
     class="flex flex-col justify-center w-full h-full box-border border-2 border-primary rounded-xl bg-bgsecondary"
   >
     <div
-      class="flex flex-row flex-grow justify-between max-h-16 m-1 text-secondary pl-4"
+      class="flex flex-row flex-grow justify-between max-h-16 m-1 text-secondary pl-4 min-h-16"
     >
       <span class="text-5xl">{{ moment.title }}</span>
       <div class="flex flex-col items-center mr-4">
@@ -14,7 +14,9 @@
       </div>
     </div>
     <div class="w-full h-2 flex bg-bgaccent"></div>
-    <div class="w-full flex flex-row location-box justify-between px-4 pb-1">
+    <div
+      class="w-full flex flex-row location-box justify-between px-4 pb-1 min-h-8"
+    >
       <span class="text-xl italic">{{ moment.subtitle }}</span>
       <span class="text-xl italic">{{ moment.location }}</span>
     </div>
