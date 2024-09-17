@@ -1,7 +1,7 @@
 <template>
   <div class="m-8 text-center flex flex-grow flex-col">
     <div
-      class="info-container h-2/3 grid grid-cols-3 items-start justify-center p-6"
+      class="info-container h-2/3 grid grid-cols-3 items-start justify-center p-6 relative"
     >
       <div class="project-parts col-span-1 h-full grid grid-rows-6">
         <div class="project-title row-span-1">
@@ -11,15 +11,15 @@
         <div
           class="parts-cards row-span-5 row-start-2 flex flex-col justify-evenly items-center"
         >
-          <div class="card p-2 w-3/4">
+          <div class="rounded-xl bg-bgaccent p-2 w-3/4">
             <h2 class="text-xl text-secondary">PinPoach-Pin</h2>
             <p>Triangulate positions between nodes.</p>
           </div>
-          <div class="card p-2 w-3/4">
+          <div class="card p-2 w-3/4 relative">
             <h2 class="text-xl text-secondary">PinPoach-ID</h2>
             <p>AI model to recognize gunfire.</p>
           </div>
-          <div class="card p-2 w-3/4">
+          <div class="rounded-xl bg-bgaccent p-2 w-3/4">
             <h2 class="text-xl text-secondary">PinPoach-Net</h2>
             <p>Link together nodes to cover area.</p>
           </div>
@@ -28,7 +28,9 @@
       <div
         class="description col-span-2 h-full flex flex-col items-center justify-evenly"
       >
-        <div class="purpose-section bg-bgprimary rounded-lg shadow-lg w-4/5">
+        <div
+          class="purpose-section bg-bgprimary rounded-lg shadow-lg w-4/5 relative"
+        >
           <h3 class="text-2xl font-semibold mb-2 text-primary">
             Purpose & Impact
           </h3>
@@ -38,7 +40,9 @@
             aiding in wildlife conservation efforts by Chengeta Wildlife.
           </p>
         </div>
-        <div class="tech-section bg-bgprimary rounded-lg shadow-lg w-4/5">
+        <div
+          class="tech-section bg-bgprimary rounded-lg shadow-lg w-4/5 relative"
+        >
           <h3 class="text-2xl font-semibold mb-2 text-primary">
             Technologies Used
           </h3>
@@ -50,20 +54,6 @@
           </div>
         </div>
       </div>
-
-      <!--
-      <div class="details w-1/2 grid grid-cols-1 gap-4">
-        <div class="purpose-section p-4 bg-bgprimary rounded-lg shadow-lg">
-          <h3 class="text-2xl font-semibold mb-2 text-primary">
-            Purpose & Impact
-          </h3>
-          <p class="text-lg">
-            Develop a system that detects gunshots in real-time to help prevent
-            poaching activities by alerting rangers and authorities, aiding in
-            wildlife conservation efforts.
-          </p>
-        </div>
-      </div> -->
     </div>
     <div
       class="footer-container h-1/3 flex items-start justify-center overflow-hidden"
