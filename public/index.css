@@ -10,6 +10,9 @@
         --background-tertiary: #29302e;
         --background-accent: #40444a;
         --text-primary: #fafafa;
+        --timeline-primary: #00FFFF;
+        --timeline-secondary: #39FF14;
+        --timeline-tertiary: #FF6EC7;
     }
 
     @media  (prefers-color-scheme: dark) {
@@ -24,6 +27,9 @@
             --background-tertiary: #29302e;
             --background-accent: #40444a;
             --text-primary: #fafafa;
+            --timeline-primary: #00FFFF;
+            --timeline-secondary: #39FF14;
+            --timeline-tertiary: #FF6EC7
         }
     }
 
@@ -38,6 +44,9 @@
         --background-tertiary: #29302e;
         --background-accent: #40444a;
         --text-primary: #fafafa;
+        --timeline-primary: #00FFFF;
+        --timeline-secondary: #39FF14;
+        --timeline-tertiary: #FF6EC7
     }
 
     :root[data-theme="light"] {
@@ -51,5 +60,8 @@
         --background-tertiary: #dcdcdc;
         --background-accent: #cccccc;
         --text-primary: #1e1e1e;
+        --timeline-primary: #00FFFF;
+        --timeline-secondary: #39FF14;
+        --timeline-tertiary: #FF6EC7
     }
 }

@@ -15,6 +15,9 @@ module.exports = {
         bgtertiary: "var(--background-tertiary)",
         bgaccent: "var(--background-accent)",
         textprimary: "var(--text-primary)",
+        timelineprimary: "var(--timeline-primary)",
+        timelinesecondary: "var(--timeline-secondary)",
+        timelinetertiary: "var(--timeline-tertiary)",
       },
       scale: {
         "-100": "-1",
