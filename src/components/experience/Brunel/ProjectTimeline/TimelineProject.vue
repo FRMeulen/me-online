@@ -42,7 +42,7 @@ const projectStyle = computed(() => {
 
   const skip = (start / totalMonths.value) * 100;
   const width = (duration / totalMonths.value) * 100;
-  const top = props.above === true ? "-8px" : "16px";
+  const top = props.above === true ? "-30%" : "70%";
 
   return {
     left: `${skip}%`,
