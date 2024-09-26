@@ -13,7 +13,7 @@
     <div class="timeline-container row-span-2 m-1 mx-8 overflow-visible">
       <BrunelTimeline @onSelect="showDetails" />
     </div>
-    <div class="detailed-container row-span-9 m-2 debug-green">
+    <div class="detailed-container row-span-9 m-2">
       <div
         class="placeholder text-2xl text-center h-full flex justify-center items-center"
         v-if="placeholder"
